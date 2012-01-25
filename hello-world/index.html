@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML5 Webcam Test</title>
+  </head>
+  <body>
+
+    <h2>The Thing cannot be described&mdash;there is no
+    language for such abysms of shrieking and immemorial
+    lunacy, such eldritch contradictions of all matter,
+    force, and cosmic order</h2>
+
+    <video id="live" autoplay></video>
+    <script type="text/javascript">
+      video = document.getElementById("live")
+
+      navigator.webkitGetUserMedia("video",
+          function(stream) {
+            video.src = window.webkitURL.createObjectURL(stream)
+          },
+          function(err) {
+            console.log("Unable to get video stream!")
+          }
+      )
+    </script>
+  </body>
+</html>
