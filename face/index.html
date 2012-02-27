@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WebRTC + Face API</title>
+    <style>
+      .photo .info {position: absolute; color: white;}
+      .photo {float: left;}
+    
+    </style>
+  </head>
+  <body>
+    <video autoplay></video>
+    <div>
+      <input placeholder="Say something..."></input>
+      <button>Chat</button>
+    </div>
+    <div id="results"></div>
+    <script type="mustache" id="face-attributes">
+      <ul class="info">
+        {{#gender}}<li><strong>gender</strong>: {{gender}}</li>{{/gender}}
+        {{#mood}}<li><strong>mood</strong>: {{mood}}</li>{{/mood}}
+        {{#glasses}}<li><strong>glasses</strong>: {{glasses}}</li>{{/glasses}}
+        {{#smiling}}<li><strong>smiling</strong>: {{smiling}}</li>{{/smiling}}
+        {{#lips}}<li><strong>lips</strong>: {{lips}}</li>{{/lips}}
+      </ul>
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/mustache.js/0.3.0/mustache.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
